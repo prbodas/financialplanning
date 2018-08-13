@@ -36,7 +36,7 @@ for year in range(0,MAX_YEAR):
 	take_home_pay = INCOME*TAX_RATE
 	post_expenses = take_home_pay - get_monthly_expenses(year)
 	current_savings = (current_savings + post_expenses)*INVESTMENT_RATE
-	amt_to_live_on = current_savings * (INVESTMENT_RATE - 1)
-	table.add_row([year, "%.2f" % current_savings, "%.2f" % amt_to_live_on])
+	passive_income = current_savings * (INVESTMENT_RATE - 1)
+	table.add_row([year, "%.2f" % current_savings, "%.2f" % passive_income])
 
 print (table)
